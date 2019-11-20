@@ -1,2 +1,2 @@
 # Brain Games
-Gemes for your brain
+Games for your brain
