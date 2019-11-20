@@ -2,7 +2,7 @@
 /.idea
 
 # npm
-/node-modules
+/node_modules
 
 # dist
 /dist
