@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "The games for your brain",
   "main": "index.js",
+  "bin": "src/bin/brain-games.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
