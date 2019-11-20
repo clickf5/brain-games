@@ -3,3 +3,6 @@
 
 # npm
 /node-modules
+
+# dist
+/dist
