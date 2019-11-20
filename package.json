@@ -1,0 +1,11 @@
+{
+  "name": "brain-games",
+  "version": "0.1.0",
+  "description": "The games for your brain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene Panin",
+  "license": "ISC"
+}
