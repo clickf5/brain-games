@@ -3,7 +3,10 @@
   "version": "0.2.0",
   "description": "The games for your brain",
   "main": "dist/index.js",
-  "bin": "dist/bin/brain-games.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
+  },
   "files": [
     "dist"
   ],
