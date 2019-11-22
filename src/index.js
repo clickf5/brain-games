@@ -6,12 +6,12 @@ export const greeting = () => {
   return userName;
 };
 
+const isEven = (num) => (num % 2 === 0);
+
+const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
+
 export const gameEven = () => {
   const userName = greeting();
-
-  const isEven = (num) => (num % 2 === 0);
-
-  const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
 
   const step = (stepCount) => {
     if (stepCount > 3) {
