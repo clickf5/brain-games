@@ -1,20 +1,43 @@
 import readlineSync from 'readline-sync';
 
-// приветсвие и получение имени пользователя
 export const greeting = () => {
-  console.log('Welcome to the Brain Games!\n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   return userName;
 };
 
-// игра "Проверка на чётность"
 export const gameEven = () => {
-  // const userName = greeting();
-  // const isEven = (num) => (num % 2 === 0);
-  // const random = (min, max) => Math.round(Math.random() * (max - min) + min);
-  // console.log(random(0, 10));
-  // console.log(random(0, 10));
-  // console.log(random(0, 10));
-  // console.log(random(0, 10));
+  const userName = greeting();
+
+  const isEven = (num) => (num % 2 === 0);
+
+  const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
+
+  const step = (stepCount) => {
+    if (stepCount > 3) {
+      return true;
+    }
+
+    // new question number
+    const questionNum = randNumGenerator(1, 100);
+
+    const trueAnswer = isEven(questionNum) ? 'yes' : 'no';
+
+    const answer = readlineSync.question(`Question: ${questionNum}\nYour answer: `);
+
+    if (answer !== trueAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
+      return false;
+    }
+
+    console.log('Correct!');
+    const newStepCount = stepCount + 1;
+    return step(newStepCount);
+  };
+
+  if (step(1)) {
+    console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}!`);
+  }
 };

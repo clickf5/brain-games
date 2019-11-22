@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 import { greeting } from '..';
 
-// узнаем имя пользователя и приветсвуем его
+console.log('Welcome to the Brain Games!\n');
 greeting();
