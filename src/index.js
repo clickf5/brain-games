@@ -18,7 +18,6 @@ export const gameEven = () => {
       return true;
     }
 
-    // new question number
     const questionNum = randNumGenerator(1, 100);
 
     const trueAnswer = isEven(questionNum) ? 'yes' : 'no';
