@@ -6,5 +6,8 @@ Games for your brain
 ## Setup
 ``make install``
 
-## Start
-``make start``
+## Build local package
+``make publish``
+
+## Install package and run game
+[![asciicast](https://asciinema.org/a/vEciKApVpR7pKx0nMhlfdEhdl.svg)](https://asciinema.org/a/vEciKApVpR7pKx0nMhlfdEhdl)
