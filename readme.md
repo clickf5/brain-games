@@ -11,3 +11,5 @@ Games for your brain
 
 ## Install package and run game
 [![asciicast](https://asciinema.org/a/vEciKApVpR7pKx0nMhlfdEhdl.svg)](https://asciinema.org/a/vEciKApVpR7pKx0nMhlfdEhdl)
+
+[![asciicast](https://asciinema.org/a/yTkSyCCOUU9exLVNG3JyAp04R.svg)](https://asciinema.org/a/yTkSyCCOUU9exLVNG3JyAp04R)
