@@ -1,25 +1,56 @@
 import readlineSync from 'readline-sync';
 
+/**
+ * Returns the username value and welcome it
+ * @returns {string}
+ */
 export const greeting = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   return userName;
 };
 
-const isEven = (num) => (num % 2 === 0);
+/**
+ * Random number generator from a custom range
+ * @param {number} min - start of range
+ * @param {number} max - end of range
+ */
+export const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
 
-const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
+/**
+ * Returns the question from the game to the user
+ * @param game {function}
+ * @returns {string}
+ */
+const getGameQuestion = (game) => game('getQuestion');
 
-const gameEvenStep = (stepCount) => {
+/**
+ * Return the true answer for actual question
+ * @param game {function}
+ * @returns {string}
+ */
+const getGameTrueAnswer = (game) => game('getTrueAnswer');
+
+/**
+ * Returns true if you have completed three steps without errors (you win)
+ * Returns false if you made a mistake at least once
+ * Use recursion
+ * @param stepCount {number}
+ * @param gamePropeties {function}
+ * @returns {boolean}
+ */
+const gameStep = (stepCount, gamePropeties) => {
   if (stepCount > 3) {
     return true;
   }
 
-  const questionNum = randNumGenerator(1, 100);
+  const game = gamePropeties();
 
-  const trueAnswer = isEven(questionNum) ? 'yes' : 'no';
+  const question = getGameQuestion(game);
 
-  const answer = readlineSync.question(`Question: ${questionNum}\nYour answer: `);
+  const trueAnswer = getGameTrueAnswer(game);
+
+  const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
   if (answer !== trueAnswer) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
@@ -28,13 +59,20 @@ const gameEvenStep = (stepCount) => {
 
   console.log('Correct!');
   const newStepCount = stepCount + 1;
-  return gameEvenStep(newStepCount);
+  return gameStep(newStepCount, gamePropeties);
 };
 
-export const gameEven = () => {
+/**
+ * Display game description, get username and run step of game
+ * @param gameDescription {string}
+ * @param gameProperties {function}
+ */
+export const gameEngine = (gameDescription, gameProperties) => {
+  console.log(`${gameDescription}\n`);
+
   const userName = greeting();
 
-  if (gameEvenStep(1)) {
+  if (gameStep(1, gameProperties)) {
     console.log(`Congratulations, ${userName}!`);
   } else {
     console.log(`Let's try again, ${userName}!`);
