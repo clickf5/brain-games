@@ -13,3 +13,5 @@ Games for your brain
 [![asciicast](https://asciinema.org/a/vEciKApVpR7pKx0nMhlfdEhdl.svg)](https://asciinema.org/a/vEciKApVpR7pKx0nMhlfdEhdl)
 
 [![asciicast](https://asciinema.org/a/yTkSyCCOUU9exLVNG3JyAp04R.svg)](https://asciinema.org/a/yTkSyCCOUU9exLVNG3JyAp04R)
+
+[![asciicast](https://asciinema.org/a/SkMNQiMJPauo5yMueuDt56pGd.svg)](https://asciinema.org/a/SkMNQiMJPauo5yMueuDt56pGd)

@@ -18,6 +18,21 @@ export const greeting = () => {
 export const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 /**
+ * Returns interface
+ * @param {string} question
+ * @param {string} trueAnswer
+ * @returns {Function}
+ */
+export const gameInterface = (question, trueAnswer) => (command) => {
+  switch (command) {
+    case 'getQuestion':
+      return question;
+    default:
+      return trueAnswer;
+  }
+};
+
+/**
  * Returns the question from the game to the user
  * @param game {function}
  * @returns {string}

@@ -1,4 +1,4 @@
-import { randNumGenerator, gameEngine } from '..';
+import { randNumGenerator, gameEngine, gameInterface } from '..';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,16 +11,7 @@ const gameProperties = () => {
 
   const trueAnswer = gameTrueAnswer(question);
 
-  return (command) => {
-    switch (command) {
-      case 'getQuestion':
-        return question;
-      case 'getTrueAnswer':
-        return trueAnswer;
-      default:
-        return false;
-    }
-  };
+  return gameInterface(question, trueAnswer);
 };
 
 const game = () => {

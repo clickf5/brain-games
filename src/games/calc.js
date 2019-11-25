@@ -1,4 +1,4 @@
-import { randNumGenerator, gameEngine } from '..';
+import { randNumGenerator, gameEngine, gameInterface } from '..';
 
 const gameDescription = 'What is the result of the expression?';
 
@@ -34,18 +34,9 @@ const gameProperties = () => {
 
   const question = `${num1} ${operand} ${num2}`;
 
-  const trueAnswer = gameTrueAnswer(num1, num2, operand);
+  const trueAnswer = `${gameTrueAnswer(num1, num2, operand)}`;
 
-  return (command) => {
-    switch (command) {
-      case 'getQuestion':
-        return question;
-      case 'getTrueAnswer':
-        return `${trueAnswer}`;
-      default:
-        return false;
-    }
-  };
+  return gameInterface(question, trueAnswer);
 };
 
 const game = () => {
