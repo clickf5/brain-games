@@ -39,8 +39,6 @@ const gameProperties = () => {
   return gameInterface(question, trueAnswer);
 };
 
-const game = () => {
+export default () => {
   gameEngine(gameDescription, gameProperties);
 };
-
-export default game;
