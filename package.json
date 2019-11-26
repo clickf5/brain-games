@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "The games for your brain",
   "main": "dist/index.js",
   "bin": {
