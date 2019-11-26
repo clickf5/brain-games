@@ -1,4 +1,5 @@
-import { randNumGenerator, gameEngine, gameInterface } from '..';
+import { randNumGenerator, gameInterface } from '..';
+import gameEngine from '../game-engine';
 
 const gameDescription = 'What number is missing in the progression?';
 

@@ -1,4 +1,5 @@
-import { randNumGenerator, gameEngine, gameInterface } from '..';
+import { randNumGenerator, gameInterface } from '..';
+import gameEngine from '../game-engine';
 
 const gameDescription = 'What is the result of the expression?';
 

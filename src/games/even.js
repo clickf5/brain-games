@@ -1,4 +1,5 @@
-import { randNumGenerator, gameEngine, gameInterface } from '..';
+import { randNumGenerator, gameInterface } from '..';
+import gameEngine from '../game-engine';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
