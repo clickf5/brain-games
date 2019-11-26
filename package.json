@@ -1,7 +1,8 @@
 {
   "name": "brain-games",
   "version": "0.7.0",
-  "description": "The games for your brain",
+  "description": "Simple brain games",
+  "keywords": ["brain", "games", "brain-games", "brain-game", "logic", "logic-games"],
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
