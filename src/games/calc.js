@@ -2,7 +2,14 @@ import { randNumGenerator, gameEngine, gameInterface } from '..';
 
 const gameDescription = 'What is the result of the expression?';
 
-const gameTrueAnswer = (num1, num2, operand) => {
+/**
+ * Returns the value of an arithmetic operation on two numbers
+ * @param {number} num1
+ * @param {number} num2
+ * @param {string} operand
+ * @returns {number}
+ */
+const calculate = (num1, num2, operand) => {
   switch (operand) {
     case '-':
       return (num1 - num2);
@@ -34,7 +41,7 @@ const gameProperties = () => {
 
   const question = `${num1} ${operand} ${num2}`;
 
-  const trueAnswer = `${gameTrueAnswer(num1, num2, operand)}`;
+  const trueAnswer = `${calculate(num1, num2, operand)}`;
 
   return gameInterface(question, trueAnswer);
 };

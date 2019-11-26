@@ -2,6 +2,11 @@ import { randNumGenerator, gameEngine, gameInterface } from '..';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+/**
+ * Return true if number is even or false if is not
+ * @param {number} num
+ * @returns {boolean}
+ */
 const isEven = (num) => (num % 2 === 0);
 
 const gameTrueAnswer = (question) => ((isEven(question)) ? 'yes' : 'no');

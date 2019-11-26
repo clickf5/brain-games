@@ -2,6 +2,12 @@ import { randNumGenerator, gameEngine, gameInterface } from '..';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
+/**
+ * Returns the greatest common divisor of two numbers
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {number}
+ */
 const gcd = (num1, num2) => {
   const dividend = (num1 < num2) ? num2 : num1;
   const divisor = (num2 < num1) ? num2 : num1;
