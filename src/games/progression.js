@@ -2,7 +2,9 @@ import { randNumGenerator, gameEngine, gameInterface } from '..';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const progressionMember = (sequenceStart, progressionStep, position) => sequenceStart + (position - 1) * progressionStep;
+const progressionMember = (sequenceStart, progressionStep, position) => (
+  sequenceStart + (position - 1) * progressionStep
+);
 
 const progression = (sequenceStart, progressionStep, secretPosition, stepCount) => {
   let sequence = '';
