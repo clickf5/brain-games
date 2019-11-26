@@ -18,7 +18,7 @@ export const greeting = () => {
 export const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 /**
- * Returns interface
+ * Interface for games
  * @param {string} question
  * @param {string} trueAnswer
  * @returns {Function}
