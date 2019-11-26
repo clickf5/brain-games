@@ -83,6 +83,7 @@ const gameStep = (stepCount, gamePropeties) => {
  * @param gameProperties {function}
  */
 export const gameEngine = (gameDescription, gameProperties) => {
+  console.log('Welcome to the Brain Games!');
   console.log(`${gameDescription}\n`);
 
   const userName = greeting();

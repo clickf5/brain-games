@@ -9,7 +9,7 @@ const progressionMember = (sequenceStart, progressionStep, position) => (
 const progression = (sequenceStart, progressionStep, secretPosition, stepCount) => {
   let sequence = '';
 
-  for (let i = 1; i !== stepCount; i += 1) {
+  for (let i = 1; i < stepCount + 1; i += 1) {
     const member = (i !== secretPosition) ? `${progressionMember(sequenceStart, progressionStep, i)}` : '..';
     sequence = `${sequence} ${member}`;
   }
