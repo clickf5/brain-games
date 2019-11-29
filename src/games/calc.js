@@ -23,24 +23,14 @@ const calculate = (num1, num2, operation) => {
   }
 };
 
-const randOperationGenerator = () => {
-  const variant = randNumGenerator(1, 3);
-  switch (variant) {
-    case 1:
-      return '-';
-    case 2:
-      return '+';
-    default:
-      return '*';
-  }
-};
+const operations = '-+*';
 
 const gameProperties = () => {
   const num1 = randNumGenerator(1, 100);
 
   const num2 = randNumGenerator(1, 100);
 
-  const operand = randOperationGenerator();
+  const operand = operations[randNumGenerator(0, operations.length - 1)];
 
   const question = `${num1} ${operand} ${num2}`;
 
