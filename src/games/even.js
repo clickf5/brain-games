@@ -1,4 +1,4 @@
-import { randNumGenerator, gameInterface } from '..';
+import { randNumGenerator, getParamByCommand } from '..';
 import gameEngine from '../game-engine';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -15,7 +15,7 @@ const gameProperties = () => {
 
   const trueAnswer = (isEven(question)) ? 'yes' : 'no';
 
-  return gameInterface(question, trueAnswer);
+  return getParamByCommand(question, trueAnswer);
 };
 
 export default () => {

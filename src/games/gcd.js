@@ -1,4 +1,4 @@
-import { randNumGenerator, gameInterface } from '..';
+import { randNumGenerator, getParamByCommand } from '..';
 import gameEngine from '../game-engine';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
@@ -30,7 +30,7 @@ const gameProperties = () => {
 
   const trueAnswer = gcd(num1, num2).toString();
 
-  return gameInterface(question, trueAnswer);
+  return getParamByCommand(question, trueAnswer);
 };
 
 export default () => {

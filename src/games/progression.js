@@ -1,4 +1,4 @@
-import { randNumGenerator, gameInterface } from '..';
+import { randNumGenerator, getParamByCommand } from '..';
 import gameEngine from '../game-engine';
 
 const gameDescription = 'What number is missing in the progression?';
@@ -44,7 +44,7 @@ const gameProperties = () => {
 
   const trueAnswer = `${progressionMember(sequenceStart, increment, secretPosition)}`;
 
-  return gameInterface(question, trueAnswer);
+  return getParamByCommand(question, trueAnswer);
 };
 
 export default () => {

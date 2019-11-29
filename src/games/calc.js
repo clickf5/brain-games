@@ -1,4 +1,4 @@
-import { randNumGenerator, gameInterface } from '..';
+import { randNumGenerator, getParamByCommand } from '..';
 import gameEngine from '../game-engine';
 
 const gameDescription = 'What is the result of the expression?';
@@ -46,7 +46,7 @@ const gameProperties = () => {
 
   const trueAnswer = `${calculate(num1, num2, operand)}`;
 
-  return gameInterface(question, trueAnswer);
+  return getParamByCommand(question, trueAnswer);
 };
 
 export default () => {

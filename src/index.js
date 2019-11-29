@@ -23,7 +23,7 @@ export const randNumGenerator = (min, max) => Math.round(Math.random() * (max - 
  * @param {string} trueAnswer
  * @returns {Function}
  */
-export const gameInterface = (question, trueAnswer) => (command) => {
+export const getParamByCommand = (question, trueAnswer) => (command) => {
   switch (command) {
     case 'getQuestion':
       return question;

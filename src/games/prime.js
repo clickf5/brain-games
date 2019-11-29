@@ -1,4 +1,4 @@
-import { randNumGenerator, gameInterface } from '..';
+import { randNumGenerator, getParamByCommand } from '..';
 import gameEngine from '../game-engine';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -32,7 +32,7 @@ const gameProperties = () => {
 
   const trueAnswer = (isPrime(question)) ? 'yes' : 'no';
 
-  return gameInterface(`${question}`, trueAnswer);
+  return getParamByCommand(`${question}`, trueAnswer);
 };
 
 export default () => {
