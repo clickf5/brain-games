@@ -42,7 +42,7 @@ const makeGameRound = () => {
 
   const question = progression(sequenceStart, increment, secretPosition, 10);
 
-  const trueAnswer = `${progressionMember(sequenceStart, increment, secretPosition)}`;
+  const trueAnswer = progressionMember(sequenceStart, increment, secretPosition).toString();
 
   return getParamByCommand(question, trueAnswer);
 };
