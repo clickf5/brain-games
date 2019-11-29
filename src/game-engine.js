@@ -3,36 +3,36 @@ import { makeQuestion } from './index';
 
 /**
  * Returns the question from the game to the user
- * @param game {function}
+ * @param round {function}
  * @returns {string}
  */
-const getGameQuestion = (game) => game('getQuestion');
+const getGameQuestion = (round) => round('getQuestion');
 
 /**
  * Return the true answer for actual question
- * @param game {function}
+ * @param round {function}
  * @returns {string}
  */
-const getGameTrueAnswer = (game) => game('getTrueAnswer');
+const getGameTrueAnswer = (round) => round('getTrueAnswer');
 
 /**
  * Returns true if you have completed three steps without errors (you win)
  * Returns false if you made a mistake at least once
  * Use recursion
  * @param stepCount {number}
- * @param gamePropeties {function}
+ * @param makeGameRound {function}
  * @returns {boolean}
  */
-const gameStep = (stepCount, gamePropeties) => {
+const gameStep = (stepCount, makeGameRound) => {
   if (stepCount > 3) {
     return true;
   }
 
-  const game = gamePropeties();
+  const round = makeGameRound();
 
-  const question = getGameQuestion(game);
+  const question = getGameQuestion(round);
 
-  const trueAnswer = getGameTrueAnswer(game);
+  const trueAnswer = getGameTrueAnswer(round);
 
   const answer = makeQuestion(question);
 
@@ -43,22 +43,22 @@ const gameStep = (stepCount, gamePropeties) => {
 
   console.log('Correct!');
   const newStepCount = stepCount + 1;
-  return gameStep(newStepCount, gamePropeties);
+  return gameStep(newStepCount, makeGameRound);
 };
 
 /**
  * Display game description, get username and run step of game
  * @param gameDescription {string}
- * @param gameProperties {function}
+ * @param makeGameRound {function}
  */
-export default (gameDescription, gameProperties) => {
+export default (gameDescription, makeGameRound) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${gameDescription}\n`);
 
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  if (gameStep(1, gameProperties)) {
+  if (gameStep(1, makeGameRound)) {
     console.log(`Congratulations, ${userName}!`);
   } else {
     console.log(`Let's try again, ${userName}!`);

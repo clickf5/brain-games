@@ -27,7 +27,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const gameProperties = () => {
+const makeGameRound = () => {
   const question = randNumGenerator(1, 10000);
 
   const trueAnswer = (isPrime(question)) ? 'yes' : 'no';
@@ -36,5 +36,5 @@ const gameProperties = () => {
 };
 
 export default () => {
-  gameEngine(gameDescription, gameProperties);
+  gameEngine(gameDescription, makeGameRound);
 };

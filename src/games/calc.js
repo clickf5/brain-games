@@ -25,7 +25,7 @@ const calculate = (num1, num2, operation) => {
 
 const operations = '-+*';
 
-const gameProperties = () => {
+const makeGameRound = () => {
   const num1 = randNumGenerator(1, 100);
 
   const num2 = randNumGenerator(1, 100);
@@ -40,5 +40,5 @@ const gameProperties = () => {
 };
 
 export default () => {
-  gameEngine(gameDescription, gameProperties);
+  gameEngine(gameDescription, makeGameRound);
 };

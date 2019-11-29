@@ -33,7 +33,7 @@ const progression = (sequenceStart, increment, secretPosition, stepCount) => {
   return sequence;
 };
 
-const gameProperties = () => {
+const makeGameRound = () => {
   const sequenceStart = randNumGenerator(1, 100);
 
   const increment = randNumGenerator(1, 100);
@@ -48,5 +48,5 @@ const gameProperties = () => {
 };
 
 export default () => {
-  gameEngine(gameDescription, gameProperties);
+  gameEngine(gameDescription, makeGameRound);
 };

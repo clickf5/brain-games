@@ -10,7 +10,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
  */
 const isEven = (num) => (num % 2 === 0);
 
-const gameProperties = () => {
+const makeGameRound = () => {
   const question = randNumGenerator(1, 100);
 
   const trueAnswer = (isEven(question)) ? 'yes' : 'no';
@@ -19,5 +19,5 @@ const gameProperties = () => {
 };
 
 export default () => {
-  gameEngine(gameDescription, gameProperties);
+  gameEngine(gameDescription, makeGameRound);
 };
