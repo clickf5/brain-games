@@ -1,16 +1,6 @@
 import readlineSync from 'readline-sync';
 
 /**
- * Returns the username value and welcome it
- * @returns {string}
- */
-export const greeting = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
-
-/**
  * Make custom question and returns answer
  * @param {string} question
  * @returns {string}

@@ -1,4 +1,5 @@
-import { greeting, makeQuestion } from './index';
+import readlineSync from 'readline-sync';
+import { makeQuestion } from './index';
 
 /**
  * Returns the question from the game to the user
@@ -54,7 +55,8 @@ export default (gameDescription, gameProperties) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${gameDescription}\n`);
 
-  const userName = greeting();
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
   if (gameStep(1, gameProperties)) {
     console.log(`Congratulations, ${userName}!`);
