@@ -34,7 +34,7 @@ const makeGameRound = () => {
 
   const question = `${num1} ${operand} ${num2}`;
 
-  const trueAnswer = `${calculate(num1, num2, operand)}`;
+  const trueAnswer = calculate(num1, num2, operand).toString();
 
   return getParamByCommand(question, trueAnswer);
 };
