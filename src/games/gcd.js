@@ -28,7 +28,7 @@ const gameProperties = () => {
 
   const question = `${num1} ${num2}`;
 
-  const trueAnswer = `${gcd(num1, num2)}`;
+  const trueAnswer = gcd(num1, num2).toString();
 
   return gameInterface(question, trueAnswer);
 };
