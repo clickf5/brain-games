@@ -7,11 +7,11 @@ const gameDescription = 'What is the result of the expression?';
  * Returns the value of an arithmetic operation on two numbers
  * @param {number} num1
  * @param {number} num2
- * @param {string} operand
+ * @param {string} operation
  * @returns {number}
  */
-const calculate = (num1, num2, operand) => {
-  switch (operand) {
+const calculate = (num1, num2, operation) => {
+  switch (operation) {
     case '-':
       return (num1 - num2);
     case '+':
@@ -23,7 +23,7 @@ const calculate = (num1, num2, operand) => {
   }
 };
 
-const randOperandGenerator = () => {
+const randOperationGenerator = () => {
   const variant = randNumGenerator(1, 3);
   switch (variant) {
     case 1:
@@ -40,7 +40,7 @@ const gameProperties = () => {
 
   const num2 = randNumGenerator(1, 100);
 
-  const operand = randOperandGenerator();
+  const operand = randOperationGenerator();
 
   const question = `${num1} ${operand} ${num2}`;
 
