@@ -27,7 +27,9 @@ export const gameInterface = (question, trueAnswer) => (command) => {
   switch (command) {
     case 'getQuestion':
       return question;
-    default:
+    case 'getTrueAnswer':
       return trueAnswer;
+    default:
+      return false;
   }
 };
