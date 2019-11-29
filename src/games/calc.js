@@ -16,8 +16,10 @@ const calculate = (num1, num2, operand) => {
       return (num1 - num2);
     case '+':
       return (num1 + num2);
-    default:
+    case '*':
       return (num1 * num2);
+    default:
+      return false;
   }
 };
 
