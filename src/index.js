@@ -16,7 +16,6 @@ export default (gameDescription, makeGameRound) => {
    * Returns false if you made a mistake at least once
    * Use recursion
    * @param currentStep {number}
-   * @param makeGameRound {function}
    * @returns {boolean}
    */
   const gameStep = (currentStep) => {
