@@ -1,5 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '..';
-import gameEngine from '../game-engine';
+import { randNumGenerator, getParamByCommand } from '../utils';
+import gameEngine from '..';
 
 const gameDescription = 'What is the result of the expression?';
 

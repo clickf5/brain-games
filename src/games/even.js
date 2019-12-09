@@ -1,5 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '..';
-import gameEngine from '../game-engine';
+import { randNumGenerator, getParamByCommand } from '../utils';
+import gameEngine from '..';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 

@@ -1,5 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '..';
-import gameEngine from '../game-engine';
+import { randNumGenerator, getParamByCommand } from '../utils';
+import gameEngine from '..';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 

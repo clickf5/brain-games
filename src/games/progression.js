@@ -1,7 +1,9 @@
-import { randNumGenerator, getParamByCommand } from '..';
-import gameEngine from '../game-engine';
+import { randNumGenerator, getParamByCommand } from '../utils';
+import gameEngine from '..';
 
 const gameDescription = 'What number is missing in the progression?';
+
+const progressionLength = 10;
 
 /**
  * Returns a member of an arithmetic progression by position
@@ -38,9 +40,9 @@ const makeGameRound = () => {
 
   const increment = randNumGenerator(1, 100);
 
-  const secretPosition = randNumGenerator(1, 10);
+  const secretPosition = randNumGenerator(1, progressionLength);
 
-  const question = makeQuestion(sequenceStart, increment, secretPosition, 10);
+  const question = makeQuestion(sequenceStart, increment, secretPosition, progressionLength);
 
   const trueAnswer = makeTrueAnswer(sequenceStart, increment, secretPosition).toString();
 
