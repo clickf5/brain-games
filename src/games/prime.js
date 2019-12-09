@@ -32,7 +32,7 @@ const makeGameRound = () => {
 
   const trueAnswer = (isPrime(question)) ? 'yes' : 'no';
 
-  return getParamByCommand(`${question}`, trueAnswer);
+  return getParamByCommand(question, trueAnswer);
 };
 
 export default () => {
