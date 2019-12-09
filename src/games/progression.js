@@ -18,15 +18,15 @@ const progressionMember = (sequenceStart, increment, position) => (
  * Returns a sequence of arithmetic progression numbers. Replacing one position with '..'
  * @param {number} sequenceStart
  * @param {number} increment
- * @param {number} secretPosition
+ * @param {number} secretElementPosition
  * @param {number} stepCount
  * @returns {string}
  */
-const makeQuestion = (sequenceStart, increment, secretPosition, stepCount) => {
+const makeQuestion = (sequenceStart, increment, secretElementPosition, stepCount) => {
   let sequence = '';
 
   for (let i = 1; i < stepCount + 1; i += 1) {
-    const member = (i !== secretPosition) ? `${progressionMember(sequenceStart, increment, i)}` : '..';
+    const member = (i !== secretElementPosition) ? `${progressionMember(sequenceStart, increment, i)}` : '..';
     sequence = `${sequence} ${member}`;
   }
 
