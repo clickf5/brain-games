@@ -30,7 +30,7 @@ const makeQuestion = (startElementValue, increment, secretElementPosition, progr
     sequence = `${sequence} ${member}`;
   }
 
-  return sequence;
+  return sequence.trim();
 };
 
 const makeGameRound = () => {
