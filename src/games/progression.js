@@ -5,28 +5,28 @@ const gameDescription = 'What number is missing in the progression?';
 
 /**
  * Returns a member of an arithmetic progression by position
- * @param {number} sequenceStart
+ * @param {number} startElementValue
  * @param {number} increment
  * @param {number} position
  * @returns {number}
  */
-const progressionMember = (sequenceStart, increment, position) => (
-  sequenceStart + (position - 1) * increment
+const makeTrueAnswer = (startElementValue, increment, position) => (
+  startElementValue + (position - 1) * increment
 );
 
 /**
  * Returns a sequence of arithmetic progression numbers. Replacing one position with '..'
- * @param {number} sequenceStart
+ * @param {number} startElementValue
  * @param {number} increment
  * @param {number} secretElementPosition
- * @param {number} stepCount
+ * @param {number} progressionLength
  * @returns {string}
  */
-const makeQuestion = (sequenceStart, increment, secretElementPosition, stepCount) => {
+const makeQuestion = (startElementValue, increment, secretElementPosition, progressionLength) => {
   let sequence = '';
 
-  for (let i = 1; i < stepCount + 1; i += 1) {
-    const member = (i !== secretElementPosition) ? `${progressionMember(sequenceStart, increment, i)}` : '..';
+  for (let i = 1; i < progressionLength + 1; i += 1) {
+    const member = (i !== secretElementPosition) ? `${makeTrueAnswer(startElementValue, increment, i)}` : '..';
     sequence = `${sequence} ${member}`;
   }
 
@@ -42,7 +42,7 @@ const makeGameRound = () => {
 
   const question = makeQuestion(sequenceStart, increment, secretPosition, 10);
 
-  const trueAnswer = progressionMember(sequenceStart, increment, secretPosition).toString();
+  const trueAnswer = makeTrueAnswer(sequenceStart, increment, secretPosition).toString();
 
   return getParamByCommand(question, trueAnswer);
 };
