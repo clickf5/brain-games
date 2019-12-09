@@ -3,7 +3,8 @@ import gameEngine from '..';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const progressionLength = 10;
+// default progression length
+const length = 10;
 
 /**
  * Returns a member of an arithmetic progression by position
@@ -40,9 +41,9 @@ const makeGameRound = () => {
 
   const increment = randNumGenerator(1, 100);
 
-  const secretPosition = randNumGenerator(1, progressionLength);
+  const secretPosition = randNumGenerator(1, length);
 
-  const question = makeQuestion(sequenceStart, increment, secretPosition, progressionLength);
+  const question = makeQuestion(sequenceStart, increment, secretPosition, length);
 
   const trueAnswer = makeTrueAnswer(sequenceStart, increment, secretPosition).toString();
 
