@@ -1,4 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '../utils';
+import { cons } from '@hexlet/pairs';
+import { randNumGenerator } from '../utils';
 import gameEngine from '..';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -15,7 +16,7 @@ const makeGameRound = () => {
 
   const trueAnswer = (isEven(question)) ? 'yes' : 'no';
 
-  return getParamByCommand(question, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
 export default () => {

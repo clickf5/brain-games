@@ -1,4 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '../utils';
+import { cons } from '@hexlet/pairs';
+import { randNumGenerator } from '../utils';
 import gameEngine from '..';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
@@ -30,7 +31,7 @@ const makeGameRound = () => {
 
   const trueAnswer = gcd(num1, num2).toString();
 
-  return getParamByCommand(question, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
 export default () => {

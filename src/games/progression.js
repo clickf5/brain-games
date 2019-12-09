@@ -1,4 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '../utils';
+import { cons } from '@hexlet/pairs';
+import { randNumGenerator } from '../utils';
 import gameEngine from '..';
 
 const gameDescription = 'What number is missing in the progression?';
@@ -47,7 +48,7 @@ const makeGameRound = () => {
 
   const trueAnswer = makeTrueAnswer(sequenceStart, increment, secretPosition).toString();
 
-  return getParamByCommand(question, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
 export default () => {

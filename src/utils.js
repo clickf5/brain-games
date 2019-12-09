@@ -16,20 +16,3 @@ export const makeQuestion = (question) => {
  * @param {number} max - end of range
  */
 export const randNumGenerator = (min, max) => Math.round(Math.random() * (max - min) + min);
-
-/**
- * Interface for games
- * @param {string} question
- * @param {string} trueAnswer
- * @returns {Function}
- */
-export const getParamByCommand = (question, trueAnswer) => (command) => {
-  switch (command) {
-    case 'getQuestion':
-      return question;
-    case 'getTrueAnswer':
-      return trueAnswer;
-    default:
-      return false;
-  }
-};

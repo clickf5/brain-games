@@ -2,7 +2,14 @@
   "name": "brain-games",
   "version": "0.7.2",
   "description": "Simple brain games",
-  "keywords": ["brain", "games", "brain-games", "brain-game", "logic", "logic-games"],
+  "keywords": [
+    "brain",
+    "games",
+    "brain-games",
+    "brain-game",
+    "logic",
+    "logic-games"
+  ],
   "main": "dist/index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
@@ -26,7 +33,8 @@
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "@hexlet/pairs": "^1.0.10"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

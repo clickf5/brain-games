@@ -1,4 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '../utils';
+import { cons } from '@hexlet/pairs';
+import { randNumGenerator } from '../utils';
 import gameEngine from '..';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -32,7 +33,7 @@ const makeGameRound = () => {
 
   const trueAnswer = (isPrime(question)) ? 'yes' : 'no';
 
-  return getParamByCommand(question, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
 export default () => {

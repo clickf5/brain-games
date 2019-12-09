@@ -1,4 +1,5 @@
-import { randNumGenerator, getParamByCommand } from '../utils';
+import { cons } from '@hexlet/pairs';
+import { randNumGenerator } from '../utils';
 import gameEngine from '..';
 
 const gameDescription = 'What is the result of the expression?';
@@ -36,7 +37,7 @@ const makeGameRound = () => {
 
   const trueAnswer = calculate(num1, num2, operand).toString();
 
-  return getParamByCommand(question, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
 export default () => {
