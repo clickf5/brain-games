@@ -22,7 +22,7 @@ const progressionMember = (sequenceStart, increment, position) => (
  * @param {number} stepCount
  * @returns {string}
  */
-const progression = (sequenceStart, increment, secretPosition, stepCount) => {
+const makeQuestion = (sequenceStart, increment, secretPosition, stepCount) => {
   let sequence = '';
 
   for (let i = 1; i < stepCount + 1; i += 1) {
@@ -40,7 +40,7 @@ const makeGameRound = () => {
 
   const secretPosition = randNumGenerator(1, 10);
 
-  const question = progression(sequenceStart, increment, secretPosition, 10);
+  const question = makeQuestion(sequenceStart, increment, secretPosition, 10);
 
   const trueAnswer = progressionMember(sequenceStart, increment, secretPosition).toString();
 
