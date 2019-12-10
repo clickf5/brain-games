@@ -1,6 +1,5 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
-import { makeQuestion } from './utils';
 
 // default step count
 const maxStepCount = 3;
@@ -29,7 +28,7 @@ export default (gameDescription, makeGameRound) => {
 
     const trueAnswer = cdr(round);
 
-    const answer = makeQuestion(question);
+    const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
     if (answer !== trueAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
