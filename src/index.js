@@ -26,9 +26,11 @@ export default (gameDescription, makeGameRound) => {
 
     const question = car(round);
 
+    console.log(`Question: ${question}`);
+
     const trueAnswer = cdr(round);
 
-    const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
+    const answer = readlineSync.question('Your answer: ');
 
     if (answer !== trueAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
