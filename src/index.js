@@ -15,10 +15,12 @@ export default (gameDescription, makeGameRound) => {
    * Returns false if you made a mistake at least once
    * Use recursion
    * @param currentStep {number}
+   * @param userName {string}
    * @returns {boolean}
    */
-  const gameStep = (currentStep) => {
+  const gameStep = (userName, currentStep) => {
     if (currentStep > maxStepCount) {
+      console.log(`Congratulations, ${userName}!`);
       return true;
     }
 
@@ -34,12 +36,13 @@ export default (gameDescription, makeGameRound) => {
 
     if (answer !== trueAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
       return false;
     }
 
     console.log('Correct!');
     const nextStep = currentStep + 1;
-    return gameStep(nextStep);
+    return gameStep(userName, nextStep);
   };
 
   console.log('Welcome to the Brain Games!');
@@ -48,9 +51,5 @@ export default (gameDescription, makeGameRound) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  if (gameStep(1)) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(`Let's try again, ${userName}!`);
-  }
+  gameStep(userName, 1);
 };
