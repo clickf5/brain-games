@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Simple brain games",
   "keywords": [
     "brain",
@@ -29,8 +29,8 @@
   "author": "Eugene Panin",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.7.2",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@hexlet/pairs": "^1.0.10",
