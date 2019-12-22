@@ -21,7 +21,7 @@ export default (gameDescription, makeGameRound) => {
   const gameStep = (userName, currentStep) => {
     if (currentStep > maxStepCount) {
       console.log(`Congratulations, ${userName}!`);
-      return true;
+      return;
     }
 
     const round = makeGameRound();
@@ -37,12 +37,12 @@ export default (gameDescription, makeGameRound) => {
     if (answer !== trueAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
+      return;
     }
 
     console.log('Correct!');
     const nextStep = currentStep + 1;
-    return gameStep(userName, nextStep);
+    gameStep(userName, nextStep);
   };
 
   console.log('Welcome to the Brain Games!');
